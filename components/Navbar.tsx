@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import twitch from "../public/assets/twitch-icon.svg";
+import logo from "../public/assets/logo.png";
 import { GoSearch } from "react-icons/go";
 import { FaUserAlt } from "react-icons/fa";
 
@@ -9,7 +9,13 @@ export const Navbar = () => {
 		<nav className="fixed top-0 left-0 flex h-20 w-full items-center justify-between bg-[#18181b] p-5">
 			{/* Right Side */}
 			<div className="flex items-center">
-				<Image className="" src={twitch} alt="/twitch" />
+				<Image
+					className="cursor-pointer duration-500 hover:scale-125"
+					src={logo}
+					height="40"
+					width="40"
+					alt="/twitch"
+				/>
 				<p className="text-md cursor-pointer p-2 font-bold text-white hover:text-purple-600 sm:text-xl">
 					Browse
 				</p>
