@@ -29,12 +29,14 @@ import user13 from "../public/assets/userIcons/userIcon13.png";
 import { BannerItems } from "./BannerItems";
 import { Channels } from "./Channels";
 import Categories from "./Categories";
+import { Streams } from "./Streams";
 
 export const Banner = () => {
 	return (
 		<section id="home" className="h-screen pt-14 pl-14 lg:pl-64">
 			<Channels />
 			<Categories />
+			<Streams />
 		</section>
 	);
 };

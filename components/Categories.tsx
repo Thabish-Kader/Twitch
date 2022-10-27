@@ -11,7 +11,7 @@ import category8 from "../public/assets/categories/category8.jpg";
 import { CategoryItem } from "./CategoryItem";
 const Categories = () => {
 	return (
-		<section id="categories" className="my-5">
+		<section id="categories" className="my-5 border-b border-gray-500">
 			<h1 className="text-xl font-bold sm:text-2xl">
 				<span className="text-purple-400">Categories</span> We think
 				you'll enjoy
@@ -51,35 +51,35 @@ const Categories = () => {
 				/>
 				<CategoryItem
 					img={category5}
-					game="GTA 5"
-					viewers="212K"
+					game="Valorant"
+					viewers="72K"
 					tag1="Adventure"
-					tag2="Buisness"
-					tag3="Cars"
+					tag2="Adventure"
+					tag3="Shooting"
 				/>
 				<CategoryItem
 					img={category6}
-					game="GTA 5"
-					viewers="212K"
-					tag1="Adventure"
-					tag2="Buisness"
-					tag3="Cars"
+					game="FIFA"
+					viewers="155K"
+					tag1="FIFA"
+					tag2="Sports"
+					tag3="Legs"
 				/>
 				<CategoryItem
 					img={category7}
-					game="GTA 5"
-					viewers="212K"
-					tag1="Adventure"
-					tag2="Buisness"
-					tag3="Cars"
+					game="League of Legends"
+					viewers="142K"
+					tag1="Magic"
+					tag2="Alien"
+					tag3="Adventure"
 				/>
 				<CategoryItem
 					img={category8}
-					game="GTA 5"
-					viewers="212K"
-					tag1="Adventure"
-					tag2="Buisness"
-					tag3="Cars"
+					game="GTA MW"
+					viewers="121K"
+					tag1="Shoot"
+					tag2="Skulls"
+					tag3="Mice"
 				/>
 			</div>
 		</section>
