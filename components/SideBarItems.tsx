@@ -1,9 +1,14 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React from "react";
 import { BsDot } from "react-icons/bs";
 import { SideBarItemsProps } from "../interface/Interface";
 
-const SideBarItems = ({ img, userName, game, viewers }: SideBarItemsProps) => {
+export const SideBarItems = ({
+	img,
+	userName,
+	game,
+	viewers,
+}: SideBarItemsProps) => {
 	return (
 		<div className="mb-2 flex w-full items-center justify-between">
 			<Image
@@ -24,5 +29,3 @@ const SideBarItems = ({ img, userName, game, viewers }: SideBarItemsProps) => {
 		</div>
 	);
 };
-
-export default SideBarItems;

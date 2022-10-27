@@ -1,8 +1,12 @@
 import React from "react";
-import SideBar from "./SideBar";
+import { SideBar } from "./SideBar";
+import { Banner } from "./Banner";
 
-const Layout = () => {
-	return <SideBar />;
+export const Layout = () => {
+	return (
+		<>
+			<SideBar />
+			<Banner />
+		</>
+	);
 };
-
-export default Layout;

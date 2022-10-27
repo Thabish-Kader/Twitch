@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { AiOutlineVideoCamera } from "react-icons/ai";
-import { BsDot } from "react-icons/bs";
+import { AiOutlineVideoCamera, AiFillCamera } from "react-icons/ai";
+import { BsCameraReels } from "react-icons/bs";
 import user1 from "../public/assets/userIcons/userIcon1.jpeg";
 import user2 from "../public/assets/userIcons/userIcon2.png";
 import user3 from "../public/assets/userIcons/userIcon3.png";
@@ -15,9 +15,9 @@ import user10 from "../public/assets/userIcons/userIcon10.png";
 import user11 from "../public/assets/userIcons/userIcon11.jpeg";
 import user12 from "../public/assets/userIcons/userIcon12.jpg";
 import user13 from "../public/assets/userIcons/userIcon13.png";
-import SideBarItems from "./SideBarItems";
+import { SideBarItems } from "./SideBarItems";
 
-const SideBar = () => {
+export const SideBar = () => {
 	return (
 		<div className="absolute top-0 left-0 h-screen w-12 bg-[#18181b] p-2 lg:w-[15rem]">
 			<div className="flex flex-col items-center bg-[#18181b] pt-12">
@@ -26,7 +26,7 @@ const SideBar = () => {
 						size={25}
 						className="mb-5 block text-gray-400 lg:hidden"
 					/>
-					<h1 className="mb-5 hidden text-lg font-bold uppercase lg:block ">
+					<h1 className="text-md mb-5 hidden font-bold uppercase lg:block ">
 						Recommended Channel
 					</h1>
 				</div>
@@ -91,11 +91,11 @@ const SideBar = () => {
 					viewers="89.3K"
 				/>
 				<div className="mt-3">
-					<AiOutlineVideoCamera
+					<BsCameraReels
 						size={25}
-						className="mb-5 block text-gray-400 lg:hidden"
+						className="mb-5 block font-bold text-gray-400 lg:hidden"
 					/>
-					<h1 className="mb-5 hidden text-lg font-bold uppercase lg:block ">
+					<h1 className="text-md mb-5 hidden font-bold uppercase lg:block ">
 						Top Channel
 					</h1>
 				</div>
@@ -121,5 +121,3 @@ const SideBar = () => {
 		</div>
 	);
 };
-
-export default SideBar;
