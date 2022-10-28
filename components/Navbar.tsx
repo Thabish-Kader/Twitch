@@ -4,7 +4,7 @@ import logo from "../public/assets/logo.png";
 import { GoSearch } from "react-icons/go";
 import { FaUserAlt } from "react-icons/fa";
 import { Menu, Transition } from "@headlessui/react";
-import { MdOutlineMoreVert } from "react-icons/Md";
+import { MdOutlineMoreVert } from "react-icons/md";
 import Link from "next/link";
 import { useSession, signIn, signOut } from "next-auth/react";
 
