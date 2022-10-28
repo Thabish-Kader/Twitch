@@ -6,6 +6,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { Menu, Transition } from "@headlessui/react";
 import { MdOutlineMoreVert } from "react-icons/Md";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 function classNames(...classes: string[]) {
 	return classes.filter(Boolean).join(" ");
