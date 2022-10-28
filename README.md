@@ -4,6 +4,8 @@
 
 This twitch UI clone was built for the purpose of learning Next Auth. Users can sign in with either google or githyb. Upon signing up a message will appear on the top right hand side with users name. This application is completely mobile responsive styles ith tailwind css. Through the execution of this application i have new-found respect to the team behind Next JS and tailwind. I will be forever gratefult to them for createing such a platform that makes the lives of us developer so much easier.
 
+Check out the [Live Demo](twitch-ui-ten.vercel.app)
+
 ## Skills Aquired
 
 -   Next Auth
