@@ -14,7 +14,7 @@ const Categories = () => {
 		<section id="categories" className="my-5 border-b border-gray-500">
 			<h1 className="text-xl font-bold sm:text-2xl">
 				<span className="text-purple-400">Categories</span> We think
-				you'll enjoy
+				you&apos;ll enjoy
 			</h1>
 			<div className="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
 				<CategoryItem
