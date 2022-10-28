@@ -13,6 +13,8 @@ function classNames(...classes: string[]) {
 }
 
 export const Navbar = () => {
+	const { data: session } = useSession();
+
 	return (
 		<nav className="fixed top-0 left-0 z-50 flex h-12 w-full items-center justify-between bg-[#18181b] p-5 shadow-md shadow-black">
 			{/* left Side */}
@@ -105,7 +107,7 @@ export const Navbar = () => {
 			</div>
 
 			{/* middle */}
-			<div className="hidden max-w-[30rem] flex-grow items-center rounded-lg bg-[#3a3a3d] p-1 hover:border-2  hover:border-purple-500 hover:bg-black sm:flex">
+			<div className="hidden max-w-[30rem] flex-grow items-center rounded-lg bg-[#3a3a3d] p-1 hover:border-2  hover:border-purple-500 hover:bg-black md:flex">
 				<input
 					type="text"
 					placeholder="Search"
@@ -116,12 +118,24 @@ export const Navbar = () => {
 			</div>
 			{/* right side */}
 			<div className="flex items-center">
-				<button className="m-3 w-20 rounded-lg bg-[#3a3a3d] p-1 font-bold hover:bg-gray-500">
-					Log In
-				</button>
-				<button className="w-20 rounded-lg bg-[#9147ff] p-1 font-bold hover:bg-purple-700">
-					Sign Up
-				</button>
+				{session?.user ? (
+					<h1 className="p-1 text-xl font-bold">
+						Welcome{" "}
+						<span className="text-purple-500">
+							{session.user.name}
+						</span>
+					</h1>
+				) : (
+					<>
+						<button className="m-3 w-20 rounded-lg bg-[#3a3a3d] p-1 font-bold hover:bg-gray-500">
+							<Link href="/login">Log In</Link>
+						</button>
+						<button className="w-20 rounded-lg bg-[#9147ff] p-1 font-bold hover:bg-purple-700">
+							<Link href="/login">Sign Up</Link>
+						</button>
+					</>
+				)}
+
 				<div className="ml-1 flex items-center rounded-lg hover:bg-gray-600">
 					<Menu as="div" className="relative text-left">
 						<div className="flex">
@@ -146,7 +160,7 @@ export const Navbar = () => {
 									<Menu.Item>
 										{({ active }) => (
 											<Link
-												href="/#signup"
+												href="/login"
 												className={classNames(
 													active
 														? " bg-purple-600  text-gray-100"
@@ -161,7 +175,8 @@ export const Navbar = () => {
 									<Menu.Item>
 										{({ active }) => (
 											<Link
-												href="/#logout"
+												href="/login"
+												onClick={() => signOut()}
 												className={classNames(
 													active
 														? "bg-purple-600 text-gray-100"
