@@ -12,7 +12,8 @@ This twitch UI clone was built for the purpose of learning Next Auth. Users can 
 
 ### Problems Faced
 
--   During the implementaion of the authentication whenever, i was clicking the log in button it was taking me to another page which again told me to login through the provider. After some research in the docs I found that by calling the login('provider name',{ callbackUrl: 'http://localhost:3000/' } ) this could be solved.
+-   During the implementaion of the authentication whenever, i was clicking the log in button it was taking me to another page which again told me to login through the provider. After some research in the docs I found that by calling the 
+ ```login('provider name',{ callbackUrl: 'http://localhost:3000/' })``` this could be solved.
 -   Another problem was in the \_app.tsx page while implementing the session provider. Typescript gave a message saying "there is such name session". After further research with the help of StackOverflow this was also solved. You can find the page [here](https://stackoverflow.com/questions/73668032/nextauth-type-error-property-session-does-not-exist-on-type).
 
 This was the code that saved me which you can find on the page
