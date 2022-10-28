@@ -14,18 +14,22 @@ function classNames(...classes: string[]) {
 export const Navbar = () => {
 	return (
 		<nav className="fixed top-0 left-0 z-50 flex h-12 w-full items-center justify-between bg-[#18181b] p-5 shadow-md shadow-black">
-			{/* Right Side */}
+			{/* left Side */}
 			<div className="flex items-center">
-				<Image
-					className="cursor-pointer duration-500 hover:scale-125"
-					src={logo}
-					height="30"
-					width="30"
-					alt="/twitch"
-				/>
-				<p className="cursor-pointer pl-2 text-sm font-bold text-white hover:text-purple-600 sm:text-xl">
-					Browse
-				</p>
+				<Link href="/#">
+					<Image
+						className="cursor-pointer duration-500 hover:scale-125"
+						src={logo}
+						height="30"
+						width="30"
+						alt="/twitch"
+					/>
+				</Link>
+				<Link href="/#categories">
+					<p className="cursor-pointer pl-2 text-sm font-bold text-white hover:text-purple-600 sm:text-xl">
+						Browse
+					</p>
+				</Link>
 				<div>
 					<Menu as="div" className="relative text-left">
 						<div className="flex">
@@ -50,7 +54,7 @@ export const Navbar = () => {
 									<Menu.Item>
 										{({ active }) => (
 											<Link
-												href="/#categories"
+												href="/#"
 												className={classNames(
 													active
 														? " bg-purple-600  text-gray-100"
@@ -58,37 +62,37 @@ export const Navbar = () => {
 													"block px-4 py-2 text-sm"
 												)}
 											>
-												Categories
-											</Link>
-										)}
-									</Menu.Item>
-									<Menu.Item>
-										{({ active }) => (
-											<Link
-												href="/#live"
-												className={classNames(
-													active
-														? "bg-purple-600 text-gray-100"
-														: "text-gray-200",
-													"block px-4 py-2 text-sm"
-												)}
-											>
-												Live
-											</Link>
-										)}
-									</Menu.Item>
-									<Menu.Item>
-										{({ active }) => (
-											<Link
-												href="/#"
-												className={classNames(
-													active
-														? "bg-purple-600 text-gray-100"
-														: "text-gray-200",
-													"block px-4 py-2 text-sm"
-												)}
-											>
 												Home
+											</Link>
+										)}
+									</Menu.Item>
+									<Menu.Item>
+										{({ active }) => (
+											<Link
+												href="/#streams"
+												className={classNames(
+													active
+														? "bg-purple-600 text-gray-100"
+														: "text-gray-200",
+													"block px-4 py-2 text-sm"
+												)}
+											>
+												Streams
+											</Link>
+										)}
+									</Menu.Item>
+									<Menu.Item>
+										{({ active }) => (
+											<Link
+												href="/#categories"
+												className={classNames(
+													active
+														? "bg-purple-600 text-gray-100"
+														: "text-gray-200",
+													"block px-4 py-2 text-sm"
+												)}
+											>
+												Categories
 											</Link>
 										)}
 									</Menu.Item>
@@ -109,7 +113,7 @@ export const Navbar = () => {
 
 				<GoSearch className=" pr-1 text-white" size={30} />
 			</div>
-			{/* left side */}
+			{/* right side */}
 			<div className="flex items-center">
 				<button className="m-3 w-20 rounded-lg bg-[#3a3a3d] p-1 font-bold hover:bg-gray-500">
 					Log In

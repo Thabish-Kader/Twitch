@@ -6,7 +6,7 @@ import { Main } from "./Main";
 
 export const Banner = () => {
 	return (
-		<section id="home" className="h-screen pt-14 pl-14 lg:pl-64">
+		<section className="h-screen pt-14 pl-14 lg:pl-64">
 			<Main />
 			<Streams />
 			<Channels />
