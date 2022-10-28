@@ -40,7 +40,7 @@ export default function Component() {
 				<h1 className="py-5 text-3xl font-bold">Log In</h1>
 				<div
 					onClick={() =>
-						signIn("github", {
+						signIn("google", {
 							callbackUrl: "http://localhost:3000/",
 						})
 					}
@@ -59,7 +59,7 @@ export default function Component() {
 				</div>
 				<div
 					onClick={() =>
-						signIn("google", {
+						signIn("github", {
 							callbackUrl: "http://localhost:3000/",
 						})
 					}
@@ -67,7 +67,7 @@ export default function Component() {
 				>
 					<BsGithub className="m-1" size={25} />
 					<button className="text-lg font-bold">
-						Sign in with Google
+						Sign in with Github
 					</button>
 				</div>
 			</div>

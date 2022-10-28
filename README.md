@@ -1,34 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Twitch UI
 
-## Getting Started
+## Next Js, Next Auth, Tailwind, Typescript
 
-First, run the development server:
+This twitch UI clone was built for the purpose of learning Next Auth. Users can sign in with either google or githyb. Upon signing up a message will appear on the top right hand side with users name. This application is completely mobile responsive styles ith tailwind css. Through the execution of this application i have new-found respect to the team behind Next JS and tailwind. I will be forever gratefult to them for createing such a platform that makes the lives of us developer so much easier.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Skills Aquired
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-   Next Auth
+-   Tailwind layout techniques
+-   Typescript Concepts (Extending interface to follow the DRY concept)
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+### Problems Faced
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+-   During the implementaion of the authentication whenever, i was clicking the log in button it was taking me to another page which again told me to login through the provider. After some research in the docs I found that by calling the login('provider name',{ callbackUrl: 'http://localhost:3000/' } ) this could be solved.
+-   Another problem was in the \_app.tsx page while implementing the session provider. Typescript gave a message saying "there is such name session". After further research with the help of StackOverflow this was also solved. You can find the page [here](https://stackoverflow.com/questions/73668032/nextauth-type-error-property-session-does-not-exist-on-type).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This was the code that saved me which you can find on the page
+function MyApp({ Component, pageProps }: AppProps<{ session: Session }>) {
+return (
+<>
+<SessionProvider session={pageProps.session}>
+<Navbar />
+<Component {...pageProps} />
+</SessionProvider>
+</>
+);
+}
 
-## Learn More
+### ScreenShots
 
-To learn more about Next.js, take a look at the following resources:
+![](../../../Desktop/Screen%20Shot%202022-10-28%20at%202.24.35%20PM.png)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![](../../../Desktop/Screen%20Shot%202022-10-28%20at%202.24.55%20PM.png)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![](../../../Desktop/Screen%20Shot%202022-10-28%20at%202.25.23%20PM.png)
 
-## Deploy on Vercel
+![](../../../Desktop/Screen%20Shot%202022-10-28%20at%202.25.39%20PM.png)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![](../../../Desktop/Screen%20Shot%202022-10-28%20at%202.26.59%20PM.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![](../../../Desktop/Screen%20Shot%202022-10-28%20at%202.28.29%20PM.png)
