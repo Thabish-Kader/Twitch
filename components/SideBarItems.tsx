@@ -13,7 +13,7 @@ export const SideBarItems = ({
 		<div className="mb-2 flex w-full items-center justify-between">
 			<Image
 				src={img}
-				alt={userName}
+				alt={userName as string}
 				height="50"
 				width="50"
 				className="rounded-full"
