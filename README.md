@@ -28,6 +28,7 @@ return (
 </>
 );
 }
+- During the deploymwnt phase i was haveing trouble with the server configuration with next auth. Next auth was working just fine when locally but it would give an error in deployment. So after some research i found the solution [here](https://medium.com/geekculture/why-and-how-to-get-started-with-next-auth-61740558b45b) . The problem was with domain name of the app which was previosly set to localhost:3000 in the callback uri of github and google.
 
 ### ScreenShots
 
